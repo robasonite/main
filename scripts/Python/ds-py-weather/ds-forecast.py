@@ -1,3 +1,12 @@
+# Copyright 2020 Robert Kight
+#
+# This is a weather forecast retreival tool.
+# 
+# NOTE: Important Note: Dark Sky was acquired by Apple Inc. on March 31, 2020.
+# As a result, they are no longer accepting new signups for their API, so
+# this program will only work "as-is" for those who got an API key prior to
+# this date. All others will need to modify the program to make it work with a
+# new data source.
 import json
 import urllib.request
 from datetime import datetime
