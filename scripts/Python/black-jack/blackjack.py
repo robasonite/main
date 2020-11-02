@@ -1,3 +1,7 @@
+# Copyright 2020 Robert Kight
+#
+# A small text-based blackjack game.
+# NOTE: This program is just for fun. No real world money is won or lost.
 import secrets
 import os
 # A simple blackjack game
