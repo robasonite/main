@@ -1,3 +1,6 @@
+# Copyright 2020, Robert Kight
+#
+# Fetch and parse a weather report from the Internet.
 require 'net/http'
 require 'json'
 require 'date'
