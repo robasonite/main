@@ -17,7 +17,7 @@ from pathlib import Path
 # Get the path to the brightness file.
 configFile = str(os.path.join(Path.home(), '.deskbuddyrc'))
 
-# Create the config file if it doesn't exist.
+# Create a settings file with default data.
 def createConfig():
     print("Unable to read config file '.deskbuddyrc'.")
     print("Attempting to create the file...")
@@ -33,20 +33,20 @@ def createConfig():
     print("Success!")
     sys.exit()
 
-# Get the current brightness from '.brightness' file in the home 
-# directory.
+
+# Read and parse the settings file.
 def readConfig():
 
-    # Try to read the file
+    # Try to read the file.
     try:
         with open(configFile) as f:
             contents = f.read()
             settingsDict = json.loads(contents)
 
-        # Return the file contents
+        # Return the file contents.
         return settingsDict
 
-    # If the file does not exist, try to creat it.
+    # If the file does not exist, try to create it.
     # except (FileNotFoundError, ValueError) as e:
     #except FileNotFoundError:
     except:
@@ -74,9 +74,9 @@ def setBrightness(brightUp=False, amount=1):
 
     # Modify brightness.
     if brightUp:
-        brightness += 1
+        brightness += amount
     else:
-        brightness -= 1
+        brightness -= amount
         
     # Update the file with the new value.
     currentSettings['brightness'] = brightness
