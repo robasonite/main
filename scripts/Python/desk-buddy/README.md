@@ -7,6 +7,7 @@ This python program helps take the hassel out of getting volume and brightness k
 
 - Dim or brighten the screen with `xrandr` or `xbacklight` commands
 - Raise, lower, and mute master volume with `amixer`
+- **NEW**: Restore "sane" volume and brightness settings
 
 
 ## Screen brightness adjustment
@@ -25,13 +26,13 @@ Section "Device"
     Identifier  "Intel Graphics" 
     Driver      "intel"
     Option      "Backlight"  "intel_backlight"
-EndSection<Paste>
+EndSection
 ```
 
 **Please keep in mind that this program was only tested on a laptop with Intel graphics. If your laptop has non-Intel graphics (Nvida, Radeon, etc), the above snippet will need to be modified.**
 
 
-Once you get `xbacklight` to work, make sure you set "hwbr" to "true". `.deskbuddyrc`
+Once you get `xbacklight` to work, make sure you set "hardBrightnessEnabled" to "true" in `.deskbuddyrc`.
 
 
 ### Hardware, hard mode
